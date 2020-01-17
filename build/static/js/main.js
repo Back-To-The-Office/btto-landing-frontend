@@ -1,16 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
     new WOW().init();
     svg4everybody({});
-    const scrollItems = [
+    let scrollItems = [
         document.querySelector('.product-info__more'),
         document.querySelector('.header-logo'),
         ...document.querySelectorAll('.header-nav__link')
     ],
         functionsTabs = document.querySelectorAll('.functions-tab'),
         priceTabs = document.querySelectorAll('.price-tab'),
-        inputForms = document.querySelectorAll('.contacts-form__input'),
-        textArea = document.querySelector('.contacts-form__textarea');
+        inputForms = document.querySelectorAll('.form__input'),
+        textArea = document.querySelector('.contacts-form__textarea'),
+        popUp = document.querySelector('.product-form'),
+        popUpClose = document.querySelector('.pop-up-close'),
+        popUpButtons = document.querySelectorAll('.open-popup'),
+        wrapper = document.querySelector('.wrapper'),
+        forms = document.querySelectorAll('.form');
 
+    popUpButtons.forEach(item => item.addEventListener('click', () => {
+        popUp.classList.toggle('pop-up-active');
+        wrapper.classList.toggle('pop-up-active');
+    }));
+
+    popUpClose.addEventListener('click', () => {
+        popUp.classList.remove('pop-up-active');
+        wrapper.classList.remove('pop-up-active');
+    });
+
+    window.addEventListener('click', event => {
+        if (popUp.classList.contains('pop-up-active') && event.target == wrapper) {
+            popUp.classList.remove('pop-up-active');
+            wrapper.classList.remove('pop-up-active');
+        }
+    });
 
     scrollItems.forEach(item => item.addEventListener('click', (event) => {
         event.preventDefault;
@@ -45,13 +66,43 @@ document.addEventListener('DOMContentLoaded', () => {
     textArea.addEventListener('focusin', () => {
         textArea.classList.add('active');
     });
+
     textArea.addEventListener('focusout', () => {
         if (textArea.value == false) {
             textArea.classList.remove('active');
         }
     });
+
+    forms.forEach(item => item.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        var formValue = item.querySelector('.email').value;
+        if (reg.test(formValue) == false) {
+            alert('Введите корректный e-mail');
+            return false;
+        } else {
+            let formData = new FormData(this);
+            formData = Object.fromEntries(formData);
+            console.log(formData)
+            ajaxSend(formData);
+            this.reset();
+        }
+    }));
+
     
 })
+
+const ajaxSend = (formData) => {
+    fetch("http://localhost:8081/api/v1/landing/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData)
+    })
+      .then(response => alert("Сообщение отправлено"))
+      .catch(error => console.error(error));
+};
 
 function animation(duration) {
     var temp;
@@ -68,31 +119,3 @@ function animation(duration) {
         })
     }
 }
-
-/* document.addEventListener('scroll', function() {
-    if (window.pageYOffset >= 1650) {
-        
-        var elemsTab = Array.from(document.querySelector(".tab-list").querySelectorAll("li"))
-        var ddd = elemsTab.filter(item => item.classList.contains('card-item'));
-        for (var i = 0; i <= elemsTab.length; i++) {
-            if (elemsTab[i].classList.contains('active') && elemsTab[i].classList.contains('card-item')) {
-                event.preventDefault()
-                document.querySelector(".functions").scrollIntoView(true)
-                elemsTab[i].classList.remove('active');
-                ddd.forEach(item => item.classList.remove("hover"));
-                elemsTab[i].nextElementSibling.classList.add('active');
-                break;
-            } else if (elemsTab[i].classList.contains('active') && elemsTab[i].classList.contains('functions-content')) {
-                if (elemsTab[i].nextElementSibling != null) {
-                    document.querySelector(".functions").scrollIntoView(true)
-                    elemsTab[i].classList.remove('active');
-                    elemsTab[i].nextElementSibling.classList.add('active');
-                    ddd.forEach(item => item.classList.add("hover"));
-                    break;
-                } else {
-                    break;
-                }
-            }
-        }
-    }
-}) */
