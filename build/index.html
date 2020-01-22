@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru-RU">
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>Главная страница</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
+    <link rel="icon" type="image/png" href="static/img/general/favicon.png">
     <link rel="stylesheet" type="text/css" href="static/css/main.css"><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
@@ -20,7 +21,7 @@
               <ul class="header-nav__list">
                 <li class="header-nav__item"><a class="header-nav__link" href="#" data-to-elem="#about">About us</a></li>
                 <li class="header-nav__item"><a class="header-nav__link" href="#" data-to-elem="#functions">Functions</a></li>
-                <li class="header-nav__item"><a class="header-nav__link" href="#" data-to-elem="#contacts">Contact</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#" data-to-elem="#contacts">Contact Us</a></li>
               </ul>
             </nav>
           </div>
@@ -31,7 +32,7 @@
         <section class="product-info" id="product-info">
           <div class="container">
             <div class="product-info__content">
-              <div class="product-info__left">
+              <div class="product-info__left fadeInLeft wow" wow-delay="2s">
                 <div class="product-info__header">
                   <div class="product-condition">soon</div>
                   <div class="product-status">Under development</div>
@@ -41,28 +42,11 @@
                 <p class="description-text">Back To The Office will help remote employees to become a part of the team.</p>
                 <div class="product-contact">
                   <p class="description-text">Send your email and we will inform you when an application is ready.</p>
-                  <form class="product-form form" action="#" method="post">
-                    <div class="pop-up-header">
-                      <h3>Subscribe</h3>
-                      <div class="pop-up-close">&times;</div>
-                    </div>
-                    <div class="pop-up-content">
-                      <div class="form__block">
-                        <label class="form__label" for="name-top">your name</label>
-                        <input class="form__input" type="text" name="name" id="name-top" required>
-                      </div>
-                      <div class="form__block">
-                        <label class="form__label" for="email-top">email</label>
-                        <input class="form__input email" type="email" name="email" id="email-top" required>
-                      </div><input type="hidden" name="popUp-form" value="popUp-form">
-                      <input class="g-btn" type="submit" value="apply for">
-                    </div>
-                  </form>
                 </div>
                 <button class="g-btn open-form-popup open-popup">apply for</button>
               </div>
-              <div class="product-info__right"><img src="static/img/content/product-info/map.svg"></div>
-            </div><a class="product-info__more" href="#" data-to-elem="#functions"><span class="learn-more">learn more</span>
+              <div class="product-info__right fadeInRight wow" wow-delay="2s"><img src="static/img/content/product-info/map.svg"></div>
+            </div><a class="product-info__more fadeIn wow" href="#" data-to-elem="#functions" wow-delay="2s"><span class="learn-more">learn more</span>
               <svg class="icon icon-dotted-arrow ">
                 <use href="static/img/svg/symbol/sprite.svg#dotted-arrow"></use>
               </svg></a>
@@ -70,22 +54,22 @@
         </section>
         <section class="about" id="about">
           <div class="container">
-            <h2 class="section-title section-title--white">About Service</h2>
+            <h2 class="section-title section-title--white fadeIn wow" wow-delay="2s">About Service</h2>
             <div class="about-content">
-              <div class="about-left">
+              <div class="about-left fadeInLeft wow" wow-delay="2s">
                 <p class="description-text description-text--white">Back to the office is an application which increases accessibility of employees.</p>
                 <p class="description-text description-text--white">All contacts of each team members are in one place. Back to the Office is useful to ask advice from a colleague from another department or urgently contact the accounting department. Employer does not wait for an answer from a manager or colleagues from the chat.</p>
                 <p class="description-text description-text--white">Issues are solved faster, employees communicate directly and share experiences.</p>
               </div>
-              <div class="about-right"><img src="static/img/content/about/contacts.gif"></div>
+              <div class="about-right fadeInRight wow" wow-delay="2s"><img src="static/img/content/about/contacts.gif"></div>
             </div>
           </div>
         </section>
         <section class="functions" id="functions">
           <div class="container">
-            <h2 class="section-title">Functions</h2>
+            <h2 class="section-title fadeIn wow" wow-delay="2s">Functions</h2>
             <ul class="tab-list">
-                      <li class="card-item functions-tab bounceInRight wow" wow-delay="1s" data-show-tab="teams">
+                      <li class="card-item functions-tab fadeIn wow" wow-delay="1s" data-show-tab="teams">
                         <div class="tab-icon">
                           <svg class="icon icon-network ">
                             <use href="static/img/svg/symbol/sprite.svg#network"></use>
@@ -99,7 +83,7 @@
                           </svg>
                         </div>
                       </li>
-              <li class="functions-content bounceInRight wow" wow-delay="1s">
+              <li class="functions-content" wow-delay="2s">
                 <div class="functions-content__item teams-tab">
                   <h3 class="sub-title">Teams</h3>
                   <div class="tab-content">
@@ -108,11 +92,13 @@
                       <p class="description-text">It increases employees communicative availability and allows them to find each other faster. </p>
                       <p class="description-text">Back to the Office lets beginners to accustom to the team better.</p>
                     </div>
-                    <div class="tab-content__right"><img src="static/img/content/about/contacts.gif"></div>
+                    <div class="tab-content__right">
+                      <video src="static/img/content/features/teams.mp4" autoplay loop></video>
+                    </div>
                   </div>
                 </div>
               </li>
-                      <li class="card-item functions-tab bounceInRight wow" wow-delay="1s" data-show-tab="company-structure">
+                      <li class="card-item functions-tab fadeIn wow" wow-delay="1s" data-show-tab="company-structure">
                         <div class="tab-icon">
                           <svg class="icon icon-structure ">
                             <use href="static/img/svg/symbol/sprite.svg#structure"></use>
@@ -126,7 +112,7 @@
                           </svg>
                         </div>
                       </li>
-              <li class="functions-content bounceInLeft wow" wow-delay="1s">
+              <li class="functions-content" wow-delay="2s">
                 <div class="functions-content__item company-structure-tab">
                   <h3 class="sub-title">Structure of the Company </h3>
                   <div class="tab-content">
@@ -135,11 +121,13 @@
                       <p class="description-text">Developer will find colleague from frontend department fast due to teams function display.</p>
                       <p class="description-text">In the case if the deadline comes soon and there isn’t any answers in the common chat, contact directly. </p>
                     </div>
-                    <div class="tab-content__right"><img src="static/img/content/about/contacts.gif"></div>
+                    <div class="tab-content__right">
+                      <video src="static/img/content/features/tree.mp4" autoplay loop></video>
+                    </div>
                   </div>
                 </div>
               </li>
-                      <li class="card-item functions-tab bounceInRight wow" wow-delay="1s" data-show-tab="time-zones">
+                      <li class="card-item functions-tab fadeIn wow" wow-delay="1s" data-show-tab="time-zones">
                         <div class="tab-icon">
                           <svg class="icon icon-time-zone ">
                             <use href="static/img/svg/symbol/sprite.svg#time-zone"></use>
@@ -153,7 +141,7 @@
                           </svg>
                         </div>
                       </li>
-              <li class="functions-content bounceInRight wow" wow-delay="1s">
+              <li class="functions-content" wow-delay="2s">
                 <div class="functions-content__item time-zones-tab">
                   <h3 class="sub-title">Time Zones</h3>
                   <div class="tab-content">
@@ -161,7 +149,9 @@
                       <p class="description-text">The graph shows time which employee has in different time zones. It will help all large companies departments to socialize around the world.</p>
                       <p class="description-text">Employees don't waste any time figuring out with Google "What time is it in Moscow now?». A single button is used to find out this information in Back to the Office.</p>
                     </div>
-                    <div class="tab-content__right"><img src="static/img/content/about/contacts.gif"></div>
+                    <div class="tab-content__right">
+                      <video src="static/img/content/features/time_zones.mp4" autoplay loop></video>
+                    </div>
                   </div>
                 </div>
               </li>
@@ -170,9 +160,9 @@
         </section>
         <section class="work">
           <div class="container">
-            <h2 class="section-title section-title--center">Get Started</h2>
+            <h2 class="section-title section-title--center fadeIn wow" wow-delay="2s">Get Started</h2>
             <div class="work-stages">
-              <div class="work-stage bounceInRight wow" wow-delay="1s">
+              <div class="work-stage fadeInUp wow" wow-delay="2s">
                 <div class="work-stage__graphics">
                   <div class="connector"></div>
                   <div class="work-stage__icon active">
@@ -188,7 +178,7 @@
                   <p class="description-text">application</p>
                 </div>
               </div>
-              <div class="work-stage bounceInLeft wow" wow-delay="1s">
+              <div class="work-stage fadeInUp wow" wow-delay="2s">
                 <div class="work-stage__graphics">
                   <div class="connector"></div>
                   <div class="work-stage__icon">
@@ -205,7 +195,7 @@
                   <p class="description-text">company</p>
                 </div>
               </div>
-              <div class="work-stage bounceInRight wow" wow-delay="1s">
+              <div class="work-stage fadeInUp wow" wow-delay="2s">
                 <div class="work-stage__graphics">
                   <div class="connector"></div>
                   <div class="work-stage__icon">
@@ -221,7 +211,7 @@
                   <p class="description-text">employees </p>
                 </div>
               </div>
-              <div class="work-stage bounceInLeft wow" wow-delay="1s">
+              <div class="work-stage fadeInUp wow" wow-delay="2s">
                 <div class="work-stage__graphics">
                   <div class="connector"></div>
                   <div class="work-stage__icon">
@@ -243,19 +233,19 @@
         </section>
         <section class="price" id="price">
           <div class="container">
-            <h2 class="section-title">Price</h2>
+            <h2 class="section-title fadeIn wow" wow-delay="2s">Price</h2>
             <ul class="tab-list">
-                      <li class="card-item price-tab"><span class="tab-price">0 $</span>
+                      <li class="card-item price-tab fadeInRight wow" wow-delay="2s"><span class="tab-price">0 $</span>
                         <h3 class="low-priority-title tab-title">Standart</h3>
                         <p class="description-text">Back to the Office — free service. We develop it for ourselves and want to share it with you.</p>
                         <button class="g-btn open-popup">apply for</button>
                       </li>
-                      <li class="card-item price-tab"><span class="tab-price">0 $</span>
+                      <li class="card-item price-tab fadeInRight wow" wow-delay="3s"><span class="tab-price">0 $</span>
                         <h3 class="low-priority-title tab-title">Setting up Support</h3>
                         <p class="description-text">We will help you to learn and configure the service for free.</p>
                         <button class="g-btn open-popup">apply for</button>
                       </li>
-                      <li class="card-item price-tab"><span class="tab-price">Details</span>
+                      <li class="card-item price-tab fadeInRight wow" wow-delay="4s"><span class="tab-price">Details</span>
                         <h3 class="low-priority-title tab-title">Additional</h3>
                         <p class="description-text">If you lack functionality, contact us. We will develop it and update your version of the service.</p>
                         <button class="g-btn open-popup">contact us ⟶</button>
@@ -265,9 +255,9 @@
         </section>
         <section class="contacts" id="contacts">
           <div class="container">
-            <h3 class="section-title contacts-title">Contacts</h3>
+            <h3 class="section-title contacts-title fadeIn wow" wow-delay="2s">Contact Us</h3>
             <div class="contacts__content">
-              <div class="contacts__content-left"><span class="contacts-text">We’ll Glad to Hear From You</span>
+              <div class="contacts__content-left fadeInLeft wow" wow-delay="2s"><span class="contacts-text">We’ll Glad to Hear From You</span>
                 <form class="contacts-form form" action="#" method="post">
                   <div class="form__block">
                     <label class="form__label" for="name">your name</label>
@@ -282,14 +272,42 @@
                   <input class="g-btn contacts-btn" type="submit" value="send us ⟶">
                 </form>
               </div>
-              <div class="contacts__content-right"></div>
-            </div><a class="write-to-us" href="mailto:backtotheoffice@gmail.com">
+              <div class="contacts__content-right fadeInRight wow" wow-delay="2s"></div>
+            </div><a class="write-to-us fadeIn wow" href="mailto:backtotheoffice@gmail.com" wow-delay="2s">
               <svg class="icon icon-mail ">
                 <use href="static/img/svg/symbol/sprite.svg#mail"></use>
               </svg>
               <p class="contacts-text">email: backtotheoffice@gmail.com</p></a>
           </div>
         </section>
+        <div class="formPopUp">
+          <form class="product-form form" action="#" method="post">
+            <div class="pop-up__header">
+              <h3>Subscribe to the newsletter</h3>
+              <div class="pop-up-close">&times;</div>
+            </div>
+            <div class="pop-up__content">
+              <div class="form__block">
+                <label class="form__label" for="name-top">your name</label>
+                <input class="form__input" type="text" name="name" id="name-top" required>
+              </div>
+              <div class="form__block">
+                <label class="form__label" for="email-top">email</label>
+                <input class="form__input email" type="email" name="email" id="email-top" required>
+              </div><input type="hidden" name="popUp-form" value="popUp-form">
+              <input class="g-btn" type="submit" value="apply for">
+            </div>
+          </form>
+        </div>
+        <div class="message-status message-status--succsess">
+          <p class="messageText">Message succsessfuly sended. Thank you!</p>
+        </div>
+        <div class="message-status message-status--error">
+          <p class="messageText">Error. Please, try later.</p>
+        </div>
+        <div class="message-status message-status--unvalid">
+          <p class="messageText">Please, enter a valid email address!</p>
+        </div>
       </div>
     </div>
     <script src="static/js/libs.min.js"></script>
