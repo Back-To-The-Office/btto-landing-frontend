@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }));
 
     functionsTabs.forEach(tab => tab.addEventListener('click', () => {
-        tab.classList.toggle('active');
         let tabName = tab.dataset.showTab;
         document.querySelector(`.${tabName}-tab`).classList.toggle('active');
     }));

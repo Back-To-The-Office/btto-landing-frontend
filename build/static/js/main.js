@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }));
 
     functionsTabs.forEach(tab => tab.addEventListener('click', () => {
-        tab.classList.toggle('active');
         let tabName = tab.dataset.showTab;
         document.querySelector(`.${tabName}-tab`).classList.toggle('active');
     }));
@@ -81,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 unfocusInput(textarea, true)
             }
             togglePopUp();
-            
+
             let formData = new FormData(this);
             formData = Object.fromEntries(formData);
             ajaxSend(formData);
