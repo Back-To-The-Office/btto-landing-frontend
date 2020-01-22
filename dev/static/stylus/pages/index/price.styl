@@ -1,0 +1,45 @@
+.price
+    padding 75px 0 90px
+    @media screen and (max-width smallDesktopWidth)
+        padding 40px 0 40px
+
+.price-tab
+    display flex
+    flex-direction column
+    align-items flex-start
+    transition all linear 0.2s
+    margin-bottom 100px
+    .tab-list
+        margin-bottom 0
+    .description-text
+        margin-bottom auto
+    .g-btn
+        width 100%
+        white-space nowrap
+        margin 0 auto
+    &:hover,
+    &.active
+        background-color mainBlue
+        .description-text
+            transition all linear 0.2s
+            color #fff
+        .tab-title
+            transition all linear 0.2s
+            color #fff
+        .tab-price
+            transition all linear 0.2s
+            color #fff
+        .g-btn
+            transition all linear 0.2s
+            color #fff
+            border 2px solid mainGreen
+            background-color mainGreen
+
+.tab-price
+    margin 0 0 auto
+    text-align center
+    font-size rem(32)
+    font-family boldFont
+    color mainBlue
+    @media screen and (max-width tableWidth)
+        font-size rem(24)

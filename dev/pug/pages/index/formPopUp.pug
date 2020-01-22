@@ -1,0 +1,14 @@
+.formPopUp
+    form(action="#" method="post").product-form.form
+        .pop-up__header
+            h3 Subscribe to the newsletter
+            .pop-up-close &times;
+        .pop-up__content
+            .form__block
+                label(for="name-top").form__label your name
+                input(type="text" name="name" id="name-top" required).form__input
+            .form__block
+                label(for="email-top").form__label email
+                input(type="email" name="email" id="email-top" required).form__input.email
+            <input type="hidden" name="popUp-form" value="popUp-form">
+            input(type="submit" value="apply for").g-btn

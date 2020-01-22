@@ -1,0 +1,29 @@
+.functions-content__item
+    margin-bottom 40px
+    display block
+    @media screen and (max-width tableWidth)
+        display none
+    &.active
+        display block
+    .sub-title
+        margin-bottom 60px
+        @media screen and (max-width tableWidth)
+            display none
+
+.tab-content
+    display flex
+    justify-content space-between
+    @media screen and (max-width tableWidth)
+        flex-direction column
+        text-align center
+
+.tab-content__left
+    flex 0 0 40%
+    .description-text
+        margin-bottom 32px
+        text-align left
+
+.tab-content__right
+    flex 0 0 56%
+    video
+        width 100%

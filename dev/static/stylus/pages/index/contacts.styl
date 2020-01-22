@@ -1,0 +1,116 @@
+.contacts
+    padding 90px 0 0
+    @media screen and (max-width tableWidth)
+        padding 0
+
+.contacts-title
+    @media screen and (max-width tableWidth)
+        display none
+
+.contacts__content
+    margin-top 40px
+    display flex
+    justify-content space-between
+    @media screen and (max-width tableWidth)
+        display none
+
+.contacts__content-left
+    min-width 450px
+    width 39%
+    padding 40px
+    display flex
+    flex-direction column
+    border-radius 16px
+    box-shadow 0px 40px 30px -15px rgba(#000, 0.05)
+    .contacts-text
+        text-align left
+    
+
+.contacts-form
+    margin-top 30px
+    display flex
+    flex-direction column
+
+.form__block
+    position relative
+    margin-bottom 35px
+
+.form__input
+    color mainBlue
+    padding 10px 0
+    display block
+    width 100%
+    border none
+    border-bottom 2px solid formColor
+    background-color transparent
+    transition all linear 0.2s
+    &.active
+        transition all linear 0.2s
+        border-color mainBlue
+        background-color transparent
+    
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  
+    color #fff
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+
+.form__label
+    text-transform capitalize
+    color textColor
+    absolute($left:0,$top:33%)
+    user-select none
+    transition all linear 0.2s
+    z-index -1
+    &.active
+        color mainBlue 
+        font-size rem(12)
+        absolute($left:0,$top:-20%)
+        transition all linear 0.2s
+        z-index 1
+
+.contacts-form__textarea-label
+    display block
+    margin-bottom 10px
+    text-transform capitalize
+    
+
+.contacts-form__textarea
+    padding 10px
+    width 100%
+    border 2px solid formColor
+    border-radius 11px
+    height 200px
+    color mainBlue
+    transition all linear 0.2s
+    &:focus
+        outline none
+    &.active
+        border-color mainBlue
+        transition all linear 0.2s
+
+.contacts-btn
+    margin-left auto
+    margin-top 25px
+
+
+.contacts__content-right
+    position relative
+    width 50%
+    background-image url("../img/general/contacts-bg.svg")
+    background-repeat no-repeat
+    background-size contain
+    @media screen and (max-width tableWidth)
+        display none
+
+
+.write-to-us
+    margin-top 120px
+    display flex
+    align-items center
+    .icon
+        size(40px, 50px)
+        fill mainBlue 
+        margin-right 20px

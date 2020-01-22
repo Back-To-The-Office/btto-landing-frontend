@@ -1,0 +1,49 @@
+.pop-up__header
+    display flex
+    justify-content center
+    align-items center
+    color #fff
+    padding 10px
+    border-radius 10px 10px 0 0
+    background-color mainBlue
+    h3
+        margin-right auto
+        font-size rem(18)
+
+.pop-up-close
+    font-size rem(24)
+    cursor pointer
+    &:hover
+        color #ccc
+
+.pop-up__content
+    padding 10px
+    display flex
+    flex-direction column
+    .g-btn 
+        width 100%
+
+.formPopUp
+    display none
+    max-width 600px
+    margin 0 auto
+    border-radius 10px
+    background-color #fff
+    absolute($top: 30%, $left: 30px, $right: 30px)
+    position fixed
+    z-index 12
+    &.pop-up-active
+        display flex
+        flex-direction column
+    .product-form
+        width 100%
+
+.product-form__email
+    margin-right 30px
+    border none 
+    background-color formColor
+    border-radius 11px
+    padding 17px
+    color mainBlue
+    width 100%
+    margin-bottom 10px 

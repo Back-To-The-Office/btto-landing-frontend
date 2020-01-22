@@ -1,0 +1,23 @@
+mixin advantageTab(icon, dataShow, title, description)
+    li(wow-delay="1s" data-show-tab= dataShow).card-item.functions-tab.fadeIn.wow
+        .tab-icon
+            +icon(icon)
+        h4.low-priority-title.tab-title= title
+        p.description-text= description
+        .tab-more
+            span.tab-more__content Learn More
+            +icon("dotted-arrow")
+
+section#functions.functions
+    .container
+        h2(wow-delay="2s").section-title.fadeIn.wow Functions
+        ul.tab-list
+            +advantageTab('network', 'teams', 'Teams', 'Employees are divided into teams, as it happens in a real office')
+            li(wow-delay="2s").functions-content
+                include functions-tabs/teams-tab
+            +advantageTab('structure', 'company-structure', 'Structure of the Company', 'The company is shown as a tree structure which consists of different teams')
+            li(wow-delay="2s").functions-content
+                include functions-tabs/company-structure
+            +advantageTab('time-zone', 'time-zones', 'Time Zones', 'Time zone reconciliation is provided for employees')
+            li(wow-delay="2s").functions-content
+                include functions-tabs/time-zones

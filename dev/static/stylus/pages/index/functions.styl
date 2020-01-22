@@ -1,0 +1,62 @@
+.functions
+    padding 180px 0 75px
+    @media screen and (max-width smallDesktopWidth)
+        padding 40px 0 40px
+    .tab-list
+        flex-direction column
+
+.functions-tab
+    display none
+    margin-bottom 40px
+    &.active
+        background-color mainBlue
+        .tab-icon,
+        .tab-more
+            .tab-more__content
+                color #fff
+                border-color #fff             
+            .icon
+                fill #fff
+    @media screen and (max-width tableWidth)
+        display flex
+        flex-direction column
+        align-items flex-start
+        width 100%
+    @media screen and (max-width bigPhoneWidth)
+        box-shadow none
+
+.tab-title
+    margin-bottom 25px
+
+.tab-icon,
+.tab-more
+    .icon
+        fill mainBlue
+
+.tab-icon
+    margin-bottom 40px
+    .icon
+        height 80px
+        width 80px
+        &-structure 
+            width 120px
+
+.tab-more
+    margin-left auto
+    margin-top auto
+    .tab-more__content
+        text-transform uppercase
+        color mainBlue
+        font-size 14px
+        letter-spacing 1.25px
+        font-family mediumFont
+    .icon
+        size(50px, 30px)
+        margin-left 20px
+    @media screen and (max-width bigPhoneWidth)
+        margin-left 0
+        .tab-more__content
+            border-bottom 2px solid mainBlue 
+            padding-bottom 2px
+        .icon
+            display none
