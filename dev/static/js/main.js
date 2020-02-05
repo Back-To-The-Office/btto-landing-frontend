@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
         statusMessages = document.querySelectorAll('.message-status')
         reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
+    const MAIN_URL = 'http://localhost:8081';
+
     popUpButtons.forEach(item => item.addEventListener('click', () => {
         togglePopUp();
     }));
@@ -88,26 +90,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }));
 
-    const focusInput = (input, textarea = false) => {
+    function focusInput (input, textarea = false) {
         input.classList.add('active');
         if (!textarea) {
             input.previousElementSibling.classList.add('active');
         }
     }
 
-    const unfocusInput = (input, textarea = false) => {
+    function unfocusInput(input, textarea = false) {
         input.classList.remove('active');
         if (!textarea) {
             input.previousElementSibling.classList.remove('active');
         }
     }
 
-    const togglePopUp = () => {
+    function togglePopUp() {
         popUp.classList.toggle('pop-up-active');
         wrapper.classList.toggle('pop-up-active');
     }
 
-    const callMessage = (succsessStatus, valid = false) => {
+    function callMessage(succsessStatus, valid = false) {
         let message;
         if (valid) {
             message = Array.from(statusMessages).filter(message => message.classList.contains('message-status--unvalid'))[0];
@@ -121,18 +123,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
     
-    const delay = ms => {
+    function delay(ms) {
         return new Promise(r => setTimeout(() => r(), ms));
     };
     
-    const showMessage = async message => {
+    async function showMessage(message) {
         message.classList.add('active');
         await delay(4000);
         message.classList.remove('active');
     };
     
-    const ajaxSend = formData => {
-        fetch("http://localhost:8081/api/v1/landing/send", {
+    function ajaxSend(formData) {
+        fetch(`${MAIN_URL}/api/v1/landing/send`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -143,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
           .catch(error => callMessage(false));
     };
     
-    const animation = duration => {
+    function animation(duration) {
         let temp;
         return sel => {
             cancelAnimationFrame(temp);
