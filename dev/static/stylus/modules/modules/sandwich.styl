@@ -1,0 +1,57 @@
+.sandwich
+    width calc(100% - 260px)
+    align-items center
+    display flex
+    @media screen and (max-width smallDesktopWidth)
+        width calc(100% - 220px)
+
+#menu__toggle
+    opacity 0
+
+.menu-btn 
+    display none
+    align-items center
+    top 20px
+    left 20px
+    width 26px
+    height 26px
+    cursor pointer
+    z-index 100
+    @media screen and (max-width tableWidth)
+        display flex
+
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after 
+    transition-duration .25s
+    display block
+    position absolute
+    width 26px
+    height 2px
+    background-color mainBlue
+
+.menu-btn > span::before 
+    content ''
+    top -8px
+
+.menu-btn > span::after 
+    content ''
+    top 8px
+
+#menu__toggle:checked ~ .menu-btn > span 
+    transform rotate(45deg)
+    background-color #fff
+
+#menu__toggle:checked ~ .menu-btn > span::before 
+    top 0
+    transform: rotate(0)
+    background-color #fff
+
+#menu__toggle:checked ~ .menu-btn > span::after 
+    top 0
+    transform rotate(90deg)
+    background-color #fff
+
+#menu__toggle:checked ~ .header-nav
+    visibility visible
+    left 0

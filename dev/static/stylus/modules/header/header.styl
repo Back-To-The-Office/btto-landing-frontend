@@ -1,0 +1,72 @@
+header
+    width 100%
+    position fixed
+    background-color #fff
+    z-index 10
+
+.header
+    width 100%
+    max-width 1320px
+    padding 8px 40px
+    margin 0 auto
+    display flex
+    justify-content space-between
+    align-items center
+    @media screen and (max-width smallDesktopWidth)
+        padding 8px 30px
+
+.header-logo
+    cursor pointer
+    font-size rem(18)
+    margin-right auto
+    text-transform uppercase
+    color mainBlue
+    font-family logoFont
+    @media screen and (max-width tableWidth)
+        width 100%
+        margin 0 auto
+        color #fff
+        padding 20px 0
+
+.header-nav
+    display flex
+    width 100%
+    @media screen and (max-width tableWidth)
+        padding-top 60px
+        flex-direction column
+        background-color rgba(mainBlue, 0.9)
+        text-align center
+        position fixed
+        visibility hidden
+        top 0
+        left -100%
+        width 100%
+        height 100%
+        transition-duration: .25s;
+
+.header-nav__list
+    display flex
+    @media screen and (max-width tableWidth)
+        flex-direction column
+
+.header-nav__item
+    margin-right 30px
+    &:last-child
+        margin-right 0
+        @media screen and (max-width smallDesktopWidth)
+            border-bottom 2px solid #fff
+    @media screen and (max-width smallDesktopWidth)
+        margin-right 20px
+    @media screen and (max-width tableWidth)
+        margin-right 0
+        border-top 2px solid #fff
+        &:hover
+            background-color rgba(#fff, 0.2)
+
+.header-nav__link
+    color mainBlue
+    @media screen and (max-width tableWidth)
+        display block
+        color #fff
+        padding 10px 0
+        width 100%

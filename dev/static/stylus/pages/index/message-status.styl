@@ -1,0 +1,27 @@
+.message-status
+    display none
+    margin 0 auto
+    max-width 600px
+    border-radius 10px
+    absolute($top: 10%, $left: 30px, $right: 30px)
+    position fixed
+    z-index 12
+    padding 8px
+    text-align center
+    &.active
+        display block
+
+.message-status--succsess
+    color #fff
+    border 2px solid mainGreen
+    background-color rgba(mainGreen, 0.9)
+
+.message-status--error
+    color #fff
+    border 2px solid dangerColor
+    background-color rgba(dangerColor, 0.9)
+
+.message-status--unvalid
+    color #fff
+    border 2px solid mainBlue
+    background-color rgba(mainBlue, 0.9)

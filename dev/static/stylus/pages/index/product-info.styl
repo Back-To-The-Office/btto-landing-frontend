@@ -1,0 +1,119 @@
+.product-info
+    overflow hidden
+    padding 200px 0 90px 0
+    .container
+        padding-right 0
+        @media screen and (max-width smallDesktopWidth)
+            padding-right 40px
+        @media screen and (max-width tableWidth)
+            padding-right 30px
+    .main-title
+        display inline-block
+        .product-status
+            position absolute
+        @media screen and (max-width tableWidth)
+            .product-status
+                display none
+    @media screen and (max-width smallDesktopWidth)
+        padding-top 100px
+    @media screen and (max-width tableWidth)
+        padding-bottom 60px
+    @media screen and (max-width bigPhoneWidth)
+        padding-bottom 40px
+        
+
+.product-info__content
+    display flex
+    justify-content space-between
+    margin-bottom 190px
+    @media screen and (max-width smallDesktopWidth)
+        flex-direction column
+        margin-bottom 50px
+    @media screen and (max-width bigPhoneWidth)
+        margin-bottom 0
+
+.product-info__left
+    width 54%
+    max-width 600px
+    @media screen and (max-width smallDesktopWidth)
+        width 100%
+        margin-bottom 30px
+    @media screen and (max-width bigPhoneWidth)
+        .description-text:first-of-type
+            margin-bottom 30px
+
+.product-info__right
+    position relative
+    width 44%
+    @media screen and (max-width smallDesktopWidth)
+        max-width 600px
+        width 100%
+    @media screen and (max-width bigPhoneWidth)
+        display none
+    img 
+        display inline-block
+        max-height 350px
+
+.product-condition
+    line-height 1
+    font-size rem(14)
+    font-family mediumFont
+    color #fff
+    text-transform uppercase
+    display inline-block
+    background-color mainBlue
+    border-radius 11px
+    padding 8px 10px 6px
+    letter-spacing 1.25px
+
+.product-status
+    font-size rem(14)
+    color mainBlue
+    font-family boldFont
+
+.product-info__header
+    display flex
+    justify-content space-between
+    align-items center
+    width 288px
+    margin-bottom 30px
+    .product-status
+        display none
+    @media screen and (max-width tableWidth)
+        .product-status
+            display block
+        margin-bottom 15px
+
+.product-contact
+    margin-top 40px
+
+.open-form-popup
+    display block
+    max-width 400px
+    width 100%
+    margin-top 40px
+    @media screen and (max-width tableWidth)
+        max-width 100%
+        width 100%
+    @media screen and (max-width bigPhoneWidth)
+        margin-top 0
+
+.product-info__more
+    cursor pointer
+    display block
+    text-align center
+    .icon
+        size(49px, 30px)
+        transform rotate(90deg)
+        fill mainBlue
+    @media screen and (max-width bigPhoneWidth)
+        display none
+    
+
+.learn-more
+    display block
+    text-transform uppercase
+    font-size rem(14)
+    font-family mediumFont
+    color mainBlue
+    margin-bottom 26px

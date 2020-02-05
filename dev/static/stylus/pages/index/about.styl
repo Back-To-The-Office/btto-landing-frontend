@@ -1,0 +1,26 @@
+.about
+    background-color mainBlue
+    padding 60px 0 190px
+    @media screen and (max-width smallDesktopWidth)
+        padding 40px 0 40px
+
+.about-content
+    display flex
+    justify-content space-between
+    @media screen and (max-width tableWidth)
+        flex-direction column
+
+.about-left
+    flex 0 0 50%
+    .description-text
+        margin-bottom 32px
+
+.about-right
+    flex 0 0 38%
+    width 100%
+    min-width 300px
+    max-width 400px
+    img 
+        width 100%
+    @media screen and (max-width tableWidth)
+        min-width 280px

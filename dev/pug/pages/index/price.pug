@@ -1,0 +1,14 @@
+mixin priceTab(title, description, price, buttonText)
+    li.card-item.price-tab.fadeInRight.wow&attributes(attributes)
+        span.tab-price= price
+        h3.low-priority-title.tab-title= title
+        p.description-text= description
+        button.g-btn.open-popup= buttonText
+
+section#price.price
+    .container
+        h2(wow-delay="2s").section-title.fadeIn.wow Price
+        ul.tab-list
+            +priceTab('Standart', 'Back To the Office — free service. We develop it for ourselves and want to share it with you.', '0 $', 'apply for')(wow-delay="2s")
+            +priceTab('Setting up Support', 'We will help you to learn and configure the service for free.', 'Details', 'apply for')(wow-delay="3s")
+            +priceTab('Additional', 'If you lack functionality, contact us. We will develop it and update your version of the service.', 'Details', 'contact us ⟶')(wow-delay="4s")

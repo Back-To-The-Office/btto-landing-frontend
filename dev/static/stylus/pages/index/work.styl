@@ -1,0 +1,55 @@
+.work
+    padding 75px 0 75px
+    @media screen and (max-width tableWidth)
+        display none
+
+.work-stages
+    display flex
+
+.work-stage
+    flex 1 1 0%
+
+.work-stage__graphics
+    align-items center
+    display flex
+    justify-content center
+    margin-bottom 100px
+
+.connector
+    flex 1
+    height 3px
+    background-color mainBlue
+
+.work-stage:first-of-type
+    .connector:first-of-type
+        background-color transparent
+
+.work-stage:last-of-type
+    .connector:last-of-type
+        background-color transparent
+    
+.work-stage__icon
+    z-index 1
+    position relative
+    size(120px)
+    border-radius 16px
+    transition all linear 0.2s
+    box-shadow 0px 30px 40px -15px rgba(#000, 0.11)
+    .icon
+        transition all linear 0.2s
+        size(52px, 56px)
+        fill mainBlue
+        absolute-center()
+    &.active,
+    &:hover
+        transition all linear 0.2s
+        cursor pointer
+        background-color mainBlue
+        .icon
+            transition all linear 0.2s
+            fill #fff
+
+.work-stage__content
+    text-align center
+    .low-priority-title
+        margin-bottom 10px

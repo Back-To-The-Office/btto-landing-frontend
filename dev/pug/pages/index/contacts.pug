@@ -1,0 +1,21 @@
+section#contacts.contacts
+    .container
+        h3(wow-delay="2s").section-title.contacts-title.fadeIn.wow Contact Us
+        .contacts__content
+            div(wow-delay="2s").contacts__content-left.fadeInLeft.wow
+                span.contacts-text We’ll Glad to Hear From You
+                form(action="#" method="post").contacts-form.form
+                    .form__block
+                        label(for="name").form__label your name
+                        input(type="text" name="name" id="name" required).form__input
+                    .form__block
+                        label(for="email").form__label email
+                        input(type="email" name="email" id="email" required).form__input.email
+                    label(for="message").contacts-form__textarea-label message
+                    textarea(name="message" id="message").contacts-form__textarea
+                    <input type="hidden" name="bottom-form" value="bottom-form">
+                    input(type="submit" value="send us ⟶").g-btn.contacts-btn
+            div(wow-delay="2s").contacts__content-right.fadeInRight.wow
+        a(href="mailto:btto.contact@gmail.com" wow-delay="2s").write-to-us.fadeIn.wow
+            +icon("mail")
+            p.contacts-text email: btto.contact@gmail.com
