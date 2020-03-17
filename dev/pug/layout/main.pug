@@ -14,6 +14,14 @@ html(lang="en-US")
 		link(rel="icon" type='image/png' href="static/img/general/favicon.png")
 		link(rel="stylesheet" type='text/css' href="static/css/main.css")
 
+		script(async src="https://www.googletagmanager.com/gtag/js?id=UA-160869376-1")
+		script.
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-160869376-1');
+
 		<!--[if lt IE 9]>
 		script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
 		<![endif]-->
