@@ -7,7 +7,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
     <link rel="icon" type="image/png" href="static/img/general/favicon.png">
-    <link rel="stylesheet" type="text/css" href="static/css/main.css"><!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160869376-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'UA-160869376-1');
+      
+    </script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body class="index-page">
@@ -17,7 +26,7 @@
           <div class="sandwich">
             <input type="checkbox" id="menu__toggle">
             <label class="menu-btn" for="menu__toggle"><span></span></label>
-            <nav class="header-nav"><a class="header-logo" href="#" data-to-elem="#product-info">back to the office</a>
+            <nav class="header-nav"><a class="service-logo service-logo--header" href="#" data-to-elem="#product-info">back to the office</a>
               <ul class="header-nav__list">
                 <li class="header-nav__item"><a class="header-nav__link" href="#" data-to-elem="#about">About us</a></li>
                 <li class="header-nav__item"><a class="header-nav__link" href="#" data-to-elem="#functions">Functions</a></li>
@@ -268,7 +277,7 @@
                     <input class="form__input email" type="email" name="email" id="email" required>
                   </div>
                   <label class="contacts-form__textarea-label" for="message">message</label>
-                  <textarea class="contacts-form__textarea" name="message" id="message"></textarea><input type="hidden" name="bottom-form" value="bottom-form">
+                  <textarea class="contacts-form__textarea" name="message" id="message" required></textarea><input type="hidden" name="bottom-form" value="bottom-form">
                   <input class="g-btn contacts-btn" type="submit" value="send us ⟶">
                 </form>
               </div>
@@ -294,7 +303,11 @@
               <div class="form__block">
                 <label class="form__label" for="email-top">email</label>
                 <input class="form__input email" type="email" name="email" id="email-top" required>
-              </div><input type="hidden" name="popUp-form" value="popUp-form">
+              </div>
+              <p class="user-agreement">
+                By signing up, I agree to the Back To the Office <a href="/policy">Privacy Policy</a> and
+                 <a href="/policy">Terms of Service.</a>
+              </p><input type="hidden" name="popUp-form" value="popUp-form">
               <input class="g-btn" type="submit" value="apply for">
             </div>
           </form>
@@ -309,6 +322,15 @@
           <p class="messageText">Please, enter a valid email address!</p>
         </div>
       </div>
+      <footer>
+        <div class="footer"><a class="service-logo service-logo--white" href="#" data-to-elem="#product-info">back to the office</a>
+          <nav class="footer-nav">
+            <ul class="footer-nav__list">
+              <li class="footer-nav__item"><a class="footer-nav__link" href="/policy">Privacy Policy and Terms of Service</a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
     </div>
     <script src="static/js/libs.min.js"></script>
     <script src="static/js/main.js"></script>

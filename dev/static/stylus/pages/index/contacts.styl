@@ -1,7 +1,7 @@
 .contacts
-    padding 90px 0 0
+    padding 90px 0 90px
     @media screen and (max-width tableWidth)
-        padding 0
+        padding 0 0 20px
 
 .contacts-title
     @media screen and (max-width tableWidth)
@@ -37,11 +37,11 @@
 
 .form__input
     color mainBlue
-    padding 10px 0
+    padding 15px 13px
     display block
     width 100%
-    border none
-    border-bottom 2px solid formColor
+    border 2px solid formColor
+    border-radius 4px
     background-color transparent
     transition all linear 0.2s
     &.active
@@ -59,15 +59,17 @@ input:-webkit-autofill:active
 
 .form__label
     text-transform capitalize
+    background-color #fff
     color textColor
-    absolute($left:0,$top:33%)
+    absolute($left: 15px,$top: 15px)
     user-select none
     transition all linear 0.2s
     z-index -1
     &.active
+        padding 0 2px
         color mainBlue 
         font-size rem(12)
-        absolute($left:0,$top:-20%)
+        absolute($left: 10px,$top: -8px)
         transition all linear 0.2s
         z-index 1
 
@@ -110,6 +112,8 @@ input:-webkit-autofill:active
     margin-top 120px
     display flex
     align-items center
+    @media screen and (max-width bigPhoneWidth)
+        flex-direction column
     .icon
         size(40px, 50px)
         fill mainBlue 

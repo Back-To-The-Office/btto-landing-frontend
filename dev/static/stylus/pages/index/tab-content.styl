@@ -25,5 +25,10 @@
 
 .tab-content__right
     flex 0 0 56%
+    display flex
+    justify-content center
     video
         width 100%
+        max-width 400px
+        @media screen and (max-width tableWidth)
+            max-width 100%
